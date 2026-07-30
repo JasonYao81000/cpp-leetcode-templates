@@ -1,6 +1,6 @@
 # C++ LeetCode Flashcards for Data Structures & Algorithms Interview Preparation
 
-This [website](https://yao-jason.github.io/cpp-leetcode-flashcards/) offers a curated collection of **37 C++ algorithm flashcards** for coding interview preparation, organized by pattern recognition rather than problem lists.
+This [website](https://yao-jason.github.io/cpp-leetcode-flashcards/) offers a curated collection of **36 C++ algorithm flashcards** for coding interview preparation, organized by pattern recognition rather than problem lists.
 
 ## 🚀 Key Philosophy
 Each flashcard is a self-contained pattern card covering:
@@ -36,7 +36,7 @@ Each flashcard is a self-contained pattern card covering:
 ## 🛠️ Tech Stack
 - **Frontend**: Vanilla JS, CSS Grid
 - **Highlighting**: [Highlight.js](https://highlightjs.org/) (GitHub Dark Theme)
-- **Data**: Centralized `data.json` — single source of truth for all 37 patterns
+- **Data**: Centralized `data.json` — single source of truth for all 36 patterns
 
 ## 📂 How to Use
 1. Use the **search box** or browse **category groups** in the sidebar to find a pattern.

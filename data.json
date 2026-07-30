@@ -363,19 +363,6 @@
     "category": "DP",
     "difficulty": "Medium"
   },
-  "Interval DP (dp[l][r])": {
-    "trigger": "Optimal value over all contiguous sub-intervals, Break or merge array segments optimally, Two-player alternating game on a linear structure",
-    "complexity": "Time: O(N³) | Space: O(N²)",
-    "code": "int n = nums.size(); // dp[left][right] = optimal value for interval [left, right]\nvector<vector<int>> dp(n, vector<int>(n, 0));\nfor (int len = 1; len <= n; len++) {        // iterate by LENGTH, not start index\n    for (int left = 0; left + len - 1 < n; left++) {\n        int right = left + len - 1;\n        for (int k = left; k <= right; k++) { // k = LAST operation in [left, right]\n            int leftVal = (k > left) ? dp[left][k-1] : 0;\n            int rightVal = (k < right) ? dp[k+1][right] : 0;\n            dp[left][right] = max(dp[left][right], leftVal + score(k) + rightVal);\n        }\n    }\n}\nreturn dp[0][n-1];",
-    "gotchas": "ALWAYS iterate by LENGTH of interval (outer loop), not by start index. The split point k represents the LAST operation performed — this is the key insight for Burst Balloons. Memoize with `dp[l][r]`. Base cases: `dp[i][i]` for single-element intervals. Adding sentinel values at array boundaries (e.g., nums[-1] = nums[n] = 1 for Burst Balloons) simplifies boundary handling.",
-    "problems": [
-      "LC 312. Burst Balloons",
-      "LC 1312. Minimum Insertion Steps to Make a String Palindrome",
-      "LC 516. Longest Palindromic Subsequence"
-    ],
-    "category": "DP",
-    "difficulty": "Hard"
-  },
   "Digit DP": {
     "trigger": "Count integers in range [L, R] satisfying digit-based constraints (e.g., no digit 4, digit sum <= K, non-decreasing digits)",
     "complexity": "Time: O(digits * 2 * 2 * states * 10) | Space: O(same)",
